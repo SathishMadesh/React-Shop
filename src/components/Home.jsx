@@ -2,13 +2,14 @@ import React from 'react'
 
 export default function Home() {
     return (
-        <div className="hero">
-            <div class="card text-bg-dark">
-                <img src="/assets/bg.jpg" class="card-img" alt="Background" />
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+        <div className="hero" >
+            <div class="card text-bg-dark text-white border-0" >
+                <img src="/assets/bg.jpg" class="card-img" alt="Background" height="700px"/>
+                <div class="card-img-overlay d-flex flex-column justify-content-around">
+                    <div className="container">
+                        <h5 class="card-title display-3 fw-bolder mb-0">NEW SEASON ARRIVALS</h5>
+                        <p class="card-text lead fs-2">CHECK OUT ALL THE TRENDS</p>
+                    </div>
                 </div>
             </div>
         </div>
