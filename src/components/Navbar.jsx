@@ -25,7 +25,9 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="buttons">
-              <a href="" className='btn btn-outline-dark'></a>
+              <a href="" className="btn btn-outline-dark">
+                <i className="fa fa-sign-in me-1">Login</i>
+              </a>
             </div>
           </div>
         </div>
