@@ -18,8 +18,12 @@ export default function Products() {
                 setLoading(false);
                 console.log(filter)
             } 
+            return () => {
+                componentMounted = false;
+            }
         }
-    })
+        getProducts();
+    }, [input]);
 
   return (
     <div>
