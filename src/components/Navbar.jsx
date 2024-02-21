@@ -34,7 +34,7 @@ export default function Navbar() {
               </a>
               <a href="" className="btn btn-outline-dark ms-2">
                 <i className="fa fa-shopping-cart me-2">Cart (0)</i>
-              </a>
+              </a> 
             </div>
           </div>
         </div>
