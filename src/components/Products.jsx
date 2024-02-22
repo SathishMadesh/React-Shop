@@ -48,7 +48,7 @@ export default function Products() {
     const filterProduct = (cat) => {
         const updatedList = data.filter((x)=>x.category === cat);
         setFilter(updatedList)
-    }
+    } 
 
     const ShowProducts = () => {
         return (
