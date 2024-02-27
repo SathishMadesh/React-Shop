@@ -1,17 +1,19 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import {Switch, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Products from './components/Products';
+import Product from './components/Product';
 
 function App() {
   return (
     <div>
       <Navbar/>
-      <Switch>
+      <Routes>
         <Route exact path="/" Component={Home}/> 
         <Route exact path="/products" Component={Products}/>
-      </Switch>
+        <Route exact path="/products/:id" Component={Product}/>
+      </Routes>
     </div>
   );
 }
