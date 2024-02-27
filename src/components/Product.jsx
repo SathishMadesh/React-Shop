@@ -33,10 +33,14 @@ export default function Product() {
                     height="400px" width="400px"/>
                 </div>
                 <div className="col-md-6">
-                    <h4 className='text-uppercase text-black-50'>
+                    <h4 className="text-uppercase text-black-50">
                         {product.category}
                     </h4>
-                    <h1 className='display-5'>{product.title}</h1>
+                    <h1 className="display-5">{product.title}</h1>
+                    <p className="lead">
+                        Rating {product.rating && product.rating.rate}
+                        <i className="fa fa-star"></i>
+                    </p>
                 </div>
             </>
         )
