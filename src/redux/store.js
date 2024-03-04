@@ -3,4 +3,4 @@ import rootReducers from "./reducer";
 
 const store = createStore(rootReducers);
 
-export default store; 
+export default store;
