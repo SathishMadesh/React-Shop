@@ -1,24 +1,44 @@
-const addItem = [];
+import Product from "../../components/Product";
 
-const addItems = (state = addItem, action) => {
+const cart = [];
+
+const handleCart = (state = addItem, action) => {
     switch (action.type) {
-        case "ADDITEM" : return [
-            ...state,
-            action.payload
-        ]
-        break;
+        case "ADDITEM" : 
+            const exist = state.find((x)=> x.id === Product.id);
+            if (exist){
+                return state.map((x)=>
+                x.id === Product.id? {...x, qty: x.qty + 1}: x
+                );
+            } else {
+                const product = action.payload;
+                return[
+                    ...state,
+                    {
+                        ...product,
+                        qty: 1,
+                    }
+                ]
+            }
+            break;
 
         case "DELITEM" :
-            return state = state.filter((x)=>{
-                return x.id !== action.payload.id
-            })
-        break;
+            const exist1 = state.find((x)=> x.id === product.id);
+            if(exist1.qty === 1){
+                return state.filter((x)=> x.id !== exist.id);
+            } else {
+                return state.map((x)=>
+                x.id === product.id ? {...x, qty: x.qty-1}: x
+                );
+            }
+            break;
 
-        default: return state;
-        break;
+        default:
+            return state;
+            break;
 
         
     }
 }
 
-export default addItems;
+export default handleCart;
